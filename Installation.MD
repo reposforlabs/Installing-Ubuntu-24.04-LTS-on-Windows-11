@@ -7,8 +7,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 # Enable Virtual Machine Platform (required for WSL 2)
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
 
-# Set WSL 2 as the default version
-wsl --set-default-version 2
+# Install WSL
+wsl --install
 
 # Download Ubuntu 24.04 LTS package
 Invoke-WebRequest -Uri https://aka.ms/wslubuntu2404 -OutFile ~/Ubuntu_2404.appx -UseBasicParsing
